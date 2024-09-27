@@ -13,6 +13,7 @@ body {
     color: #ededed;
 }
 
+/* Header Styling */
 .header {
     position: fixed;
     top: 0;
@@ -31,26 +32,27 @@ body {
     color: #ededed;
     text-decoration: none;
     font-weight: 600;
-    margin-top: 30px; 
+    margin-top: 30px;
 }
 
+/* Main Content Styling */
 .home {
     height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
     text-align: center;
-    position: relative; 
+    position: relative;
 }
 
 .home-content {
     max-width: 600px;
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
 }
 
 .home-content h1 {
-    font-size: 48px; 
+    font-size: 48px;
     font-weight: 700;
     line-height: 1.2;
 }
@@ -65,9 +67,9 @@ body {
 
 .home-image {
     position: absolute;
-    right: 10%; 
+    right: 10%;
     top: 50%;
-    transform: translateY(-50%); 
+    transform: translateY(-50%);
     max-width: 400px;
 }
 
@@ -76,6 +78,7 @@ body {
     height: auto;
 }
 
+/* Social Icons Styling */
 .home-sci {
     position: absolute;
     bottom: 40px;
@@ -122,26 +125,72 @@ body {
     width: 100%;
 }
 
+/* Button Styling */
 .button-container {
-    margin-top: 20px; 
+    margin-top: 20px;
     display: flex;
-    justify-content: center; 
-    gap: 20px; 
+    justify-content: center;
+    gap: 20px;
 }
 
 .project-button {
-    background-color: #8412c5; 
-    color: #fff; 
-    padding: 10px 20px; 
-    border: none; 
-    border-radius: 5px; 
-    text-decoration: none; 
-    font-size: 18px; 
-    font-weight: 500; 
-    transition: background-color 0.3s; 
+    background-color: #8412c5;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: background-color 0.3s;
 }
 
 .project-button:hover {
-    background-color: #ededed; 
-    color: #8412c5; 
+    background-color: #ededed;
+    color: #8412c5;
 }
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+    .header {
+        padding: 15px 5%;
+    }
+
+    .logo {
+        font-size: 20px;
+        margin-top: 0;
+    }
+
+    .home-content h1 {
+        font-size: 36px;
+    }
+
+    .home-image {
+        position: static;
+        margin-top: 20px;
+    }
+
+    .home-sci {
+        width: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-content h1 {
+        font-size: 28px;
+    }
+
+    .project-button {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+
+    .home-sci {
+        bottom: 20px;
+    }
+
+    .home-image img {
+        max-width: 80%;
+    }
+}
+
