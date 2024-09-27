@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: url('images/space-background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #ededed;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 30px; 
+}
+
+.home {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    text-align: center;
+    position: relative; 
+}
+
+.home-content {
+    max-width: 600px;
+    margin-bottom: 20px; 
+}
+
+.home-content h1 {
+    font-size: 48px; 
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.my-text {
+    color: #ededed;
+}
+
+.project-text {
+    color: #8412c5;
+}
+
+.home-image {
+    position: absolute;
+    right: 10%; 
+    top: 50%;
+    transform: translateY(-50%); 
+    max-width: 400px;
+}
+
+.home-image img {
+    width: 100%;
+    height: auto;
+}
+
+.home-sci {
+    position: absolute;
+    bottom: 40px;
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-sci a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #ededed;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #ededed;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.home-sci a:hover {
+    color: #8412c5;
+}
+
+.home-sci a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #ededed;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.home-sci a:hover::before {
+    width: 100%;
+}
+
+.button-container {
+    margin-top: 20px; 
+    display: flex;
+    justify-content: center; 
+    gap: 20px; 
+}
+
+.project-button {
+    background-color: #8412c5; 
+    color: #fff; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    text-decoration: none; 
+    font-size: 18px; 
+    font-weight: 500; 
+    transition: background-color 0.3s; 
+}
+
+.project-button:hover {
+    background-color: #ededed; 
+    color: #8412c5; 
+}
