@@ -32,53 +32,63 @@ body {
     color: #ededed;
     text-decoration: none;
     font-weight: 600;
-    margin-top: 30px;
 }
+
+.navbar a {
+    font-size: 18px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: 0.3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #8412c5;
+}
+
 
 /* Main Content Styling */
 .home {
     height: 100vh;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-    position: relative;
+    justify-content: space-between; 
+    padding: 0 10%;
+}
+
+.home-image {
+    max-width: 600px; 
+    margin-left: 50px;
+}
+
+.home-image img {
+    width: 100%; 
+    height: auto; 
 }
 
 .home-content {
     max-width: 600px;
-    margin-bottom: 20px;
 }
 
 .home-content h1 {
-    font-size: 48px;
+    font-size: 32px;
     font-weight: 700;
     line-height: 1.2;
 }
 
-.my-text {
-    color: #ededed;
-}
-
-.project-text {
+.home-content h3 {
+    font-size: 56px;
+    font-weight: 700;
     color: #8412c5;
 }
 
-.home-image {
-    position: absolute;
-    right: 10%;
-    top: 50%;
-    transform: translateY(-50%);
-    max-width: 400px;
+.home-content p {
+    font-size: 20px;
+    margin: 20px 0 40px;
 }
 
-.home-image img {
-    width: 100%;
-    height: auto;
-}
-
-/* Social Icons Styling */
 .home-sci {
     position: absolute;
     bottom: 40px;
@@ -109,20 +119,157 @@ body {
     color: #8412c5;
 }
 
-.home-sci a::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background: #ededed;
-    z-index: -1;
-    transition: 0.5s;
+/* About Section Styling */
+.about {
+    padding: 50px 10%;
+    color: #ededed;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
 }
 
-.home-sci a:hover::before {
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
+}
+
+.about-image {
+    flex: 1;
+    margin-right: 30px;
+}
+
+.about-me-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.about-content {
+    flex: 2;
+    max-width: 800px;
+    margin-left: 30px;
+    opacity: 0;
+    transform: translateX(100%);
+    animation: slideIn 1s forwards;
+    animation-delay: 0.3s;
+}
+
+.about-content h1 {
+    font-size: 56px;  
+    margin-bottom: 20px;
+    text-align: center; 
+    color: #8412c5;
+}
+
+.about-content h3 {
+    font-size: 36px;  
+    font-weight: 700;
+    color: #ededed; 
+}
+
+.about-content p { 
+    font-size: 20px;
+    margin: 20px 0 40px;
+}
+
+/* Animation for About Section */
+.animate-enter .about-content {
+    opacity: 1;
+    transform: translateX(0);
+    animation: slideIn 0.5s forwards;
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+    .header {
+        padding: 15px 5%;
+    }
+
+    .logo {
+        font-size: 20px;
+        margin-top: 0;
+    }
+
+    .home-content h1 {
+        font-size: 36px;
+    }
+
+    .home-image {
+        position: static;
+        margin-top: 20px;
+    }
+
+    .about {
+        padding: 30px 5%;
+    }
+
+    .about-content h1 {
+        font-size: 36px;  
+    }
+}
+
+@media (max-width: 480px) {
+    .home-content h1 {
+        font-size: 28px;
+    }
+
+    .about-content h1 {
+        font-size: 28px;  
+    }
+}
+
+/* Keyframes for Animation */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+body {
+    background: url('images/space-background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #ededed;
+}
+
+/* Other styles remain the same... */
+
+/* Main Content Styling */
+.home, .about {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 0 10%;
+    transition: opacity 0.3s ease-in-out; /* Add transition for smooth fading */
+    opacity: 1; /* Default opacity */
+}
+
+/* Modify display of sections when hiding */
+.home.hidden, .about.hidden {
+    opacity: 0; /* Fade out */
+}
+
+/* About Section Styling */
+.about {
+    color: #ededed;
+}
+
+/* Animation for About Section */
+.animate-enter .about-content {
+    opacity: 1;
+    transform: translateX(0);
+    animation: slideIn 0.5s forwards;
+}
+
+.project-text {
+    color: #8412c5;
 }
 
 /* Button Styling */
@@ -150,56 +297,163 @@ body {
     color: #8412c5;
 }
 
-/* Media Query for smaller screens */
+/* Common Styles */
+.hidden {
+    display: none;
+}
+
+.main-content {
+    padding: 50px 10%;
+    transition: opacity 0.3s ease-in-out; /* Smooth fade-in/fade-out */
+    opacity: 1;  /* Default visible */
+}
+
+.home, .about, .project {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh; /* Full viewport height */
+    padding: 0 10%;
+}
+
+.project-button {
+    background-color: #8412c5;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.project-button:hover {
+    background-color: #ededed;
+    color: #8412c5;
+}
+
+/* Responsive adjustments */
 @media (max-width: 768px) {
+    .home, .about, .project {
+        flex-direction: column;
+        padding: 20px 5%;
+    }
+
     .header {
         padding: 15px 5%;
     }
 
-    .logo {
-        font-size: 20px;
-        margin-top: 0;
-    }
-
-    .home-content h1 {
-        font-size: 36px;
+    .home-content h1, .about-content h1 {
+        font-size: 32px;
+        text-align: center;
     }
 
     .home-image {
-        position: static;
         margin-top: 20px;
+        max-width: 100%;
+        text-align: center;
     }
 
-    .home-sci {
-        width: 150px;
+    .about-container {
+        flex-direction: column;
+    }
+
+    .about-content {
+        margin-left: 0;
+    }
+
+    .button-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navbar a {
+        margin-left: 15px;
+        font-size: 16px;
     }
 }
 
 @media (max-width: 480px) {
-    .home-content h1 {
+    .home-content h1, .about-content h1 {
         font-size: 28px;
+        text-align: center;
     }
 
-    .project-button {
-        font-size: 16px;
-        padding: 8px 16px;
+    .home-image img, .about-image img {
+        width: 100%;
     }
 
-    .home-sci {
-        bottom: 20px;
-    }
-
-    .home-image img {
-        max-width: 80%;
+    .navbar a {
+        font-size: 14px;
     }
 }
 
-@media (min-width: 600px) {
-    .home {
-        flex-direction: row; /
-    }
+/* Transitions */
+.home, .about, .project {
+    transition: opacity 0.5s ease-in-out;
+}
 
-    .button-container {
-        flex-direction: row; 
+/* Project Section Styling */
+.project {
+    padding: 50px 10%;
+    color: #ededed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Center content vertically and horizontally */
+    height: 100vh; /* Full height of the viewport */
+    text-align: center; /* Ensure the text is centered */
+}
+
+.project-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    text-align: center; /* Center text */
+    opacity: 0; /* Start hidden for animation */
+    animation: fadeIn 0.5s forwards; /* Fade-in effect */
+}
+
+/* Button Container */
+.button-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Ensure buttons stay centered on smaller screens */
+}
+
+/* Animation for fading in the project section */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
     }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Project Section Styling */
+.project-content {
+    display: flex;
+    flex-direction: column; /* Arrange the header and button-container vertically */
+    align-items: center; /* Center align content */
+    text-align: center; /* Center text for the project section */
+}
+
+.button-container {
+    display: flex; /* Keep buttons in a row */
+    justify-content: center; /* Center buttons horizontally */
+    margin-bottom: 20px; /* Space between buttons and image */
+}
+
+.project-image {
+    margin-top: 20px; /* Add space above the image */
+}
+
+.project-image img {
+    width: 300px; /* Set the desired width for the image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: rounded corners for the image */
 }
