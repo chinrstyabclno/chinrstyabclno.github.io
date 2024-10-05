@@ -84,50 +84,57 @@
 </section>
 
     <script>
-        // Function for smooth section transitions
-function smoothTransition(hideSectionId, showSectionId) {
-    const hideSection = document.getElementById(hideSectionId);
-    const showSection = document.getElementById(showSectionId);
+    document.addEventListener('DOMContentLoaded', function () {
+    // Function for smooth section transitions
+    function smoothTransition(hideSectionId, showSectionId) {
+        const hideSection = document.getElementById(hideSectionId);
+        const showSection = document.getElementById(showSectionId);
 
-    // Hide the current section with a smooth fade-out
-    hideSection.style.opacity = '0';
-    setTimeout(() => {
-        hideSection.style.display = 'none';  // After fade-out, hide the section
-
-        // Show the new section with fade-in effect
-        showSection.style.display = 'flex'; // Display the new section
+        hideSection.style.opacity = '0';
         setTimeout(() => {
-            showSection.style.opacity = '1';  // After small delay, start fade-in
-        }, 50);
-    }, 300);  // Duration matches the CSS transition for smoothness
-}
+            hideSection.style.display = 'none';  // After fade-out, hide the section
 
-// Function to highlight the active navigation link
-function highlightLink(activeLinkId, ...inactiveLinkIds) {
-    document.getElementById(activeLinkId).classList.add('active');
-    inactiveLinkIds.forEach(id => {
-        document.getElementById(id).classList.remove('active');
+            showSection.style.display = 'flex'; // Display the new section
+            setTimeout(() => {
+                showSection.style.opacity = '1';  // After small delay, start fade-in
+            }, 50);
+        }, 300);  // Duration matches the CSS transition for smoothness
+    }
+
+    // Function to highlight the active navigation link
+    function highlightLink(activeLinkId, ...inactiveLinkIds) {
+        const activeLink = document.getElementById(activeLinkId);
+        if (activeLink) {
+            activeLink.classList.add('active');
+        }
+        inactiveLinkIds.forEach(id => {
+            const link = document.getElementById(id);
+            if (link) {
+                link.classList.remove('active');
+            }
+        });
+    }
+
+    // Event listeners for navigation
+    document.getElementById('about-link').addEventListener('click', function (e) {
+        e.preventDefault();
+        smoothTransition(document.querySelector('section:not([style*="display: none;"])').id, 'about-section');
+        highlightLink('about-link', 'home-link', 'project-link', 'contact-link');
     });
-}
 
-// Event listeners for navigation
-document.getElementById('about-link').addEventListener('click', function (e) {
-    e.preventDefault();
-    smoothTransition(document.querySelector('section:not([style*="display: none;"])').id, 'about-section');
-    highlightLink('about-link', 'home-link', 'project-link', 'contact-link');
+    document.getElementById('project-link').addEventListener('click', function (e) {
+        e.preventDefault();
+        smoothTransition(document.querySelector('section:not([style*="display: none;"])').id, 'project-section');
+        highlightLink('project-link', 'home-link', 'about-link', 'contact-link');
+    });
+
+    document.getElementById('home-link').addEventListener('click', function (e) {
+        e.preventDefault();
+        smoothTransition(document.querySelector('section:not([style*="display: none;"])').id, 'home-section');
+        highlightLink('home-link', 'about-link', 'project-link', 'contact-link');
+    });
 });
 
-document.getElementById('project-link').addEventListener('click', function (e) {
-    e.preventDefault();
-    smoothTransition(document.querySelector('section:not([style*="display: none;"])').id, 'project-section');
-    highlightLink('project-link', 'home-link', 'about-link', 'contact-link');
-});
-
-document.getElementById('home-link').addEventListener('click', function (e) {
-    e.preventDefault();
-    smoothTransition(document.querySelector('section:not([style*="display: none;"])').id, 'home-section');
-    highlightLink('home-link', 'about-link', 'project-link', 'contact-link');
-});
 
     </script>
     
