@@ -1,146 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio | Home</title>
-    <link rel="stylesheet" href="style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Travel Explorer</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> <!-- Link to the external CSS file -->
 </head>
-
-<body class="page-enter">
-    <header class="header">
-        <a href="index.html" class="logo">chinrstyabclno</a>
-
-        <nav class="navbar">
-            <a href="#" class="active" id="home-link">Home</a>
-            <a href="#" id="about-link">About</a>
-            <a href="#" id="project-link">Project</a>
-            <a href="contact.html">Contact</a>
-        </nav>        
-    </header>
-
-    <!-- Home Section -->
-    <section class="home main-content" id="home-section">
-        <div class="home-content">
-            <h1>Hello, It’s me your future Web Developer</h1>
-            <h3>Christyn Blanco</h3>
-            <p>"It’s not a bug; it’s an undocumented feature." — Unknown</p>
-        </div>
-
-        <div class="home-image">
-            <img src="images/character.png" alt="Character Image">
-        </div>
-
-        <div class="home-sci">
-            <a href="#"><i class='bx bxl-facebook-circle'></i></a>
-            <a href="#"><i class='bx bxl-instagram'></i></a>
-            <a href="#"><i class='bx bxl-tiktok'></i></a>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about-section" style="display: none;" class="about">
-        <div class="about-container">
-            <div class="about-image">
-                <img src="images/pic1.png" alt="About Me Image" class="about-me-img">
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">TinTraverse</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#destinations">Destinations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#offers">Offers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about-us">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary text-white ml-3" href="#">Sign Up</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-outline-primary ml-2" href="#">Login</a>
+                    </li>
+                </ul>
             </div>
+        </div>
+    </nav>    
 
-            <div class="about-content">
-                <h1>About Me</h1>
-                <h3>My Development Journey as a Student</h3>
-                <p>
-                    As a student web developer, my path may not have begun with the aspiration to become a developer, 
-                    but I am truly enthusiastic about the skills I'm learning and the projects I'm undertaking. Through 
-                    a variety of personal projects, I've been working on my skills in HTML, CSS, and JavaScript, while 
-                    also trying out frameworks like React. Throughout my learning journey, I've encountered challenges 
-                    that have helped me develop problem-solving skills and understand the significance of teamwork. I 
-                    aim to build user-friendly applications that incorporate design principles for a better user 
-                    experience. Looking ahead, I want to delve deeper into specific areas of web development, 
-                    particularly front-end development and UX design. Although I don't consider myself highly skilled 
-                    in coding yet, I am dedicated to continuous learning and active participation in the coding 
-                    community, embracing every opportunity to improve my technical and soft skills so I can achieve 
-                    success in this ever-evolving field.
-                </p>
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="hero-content text-center text-white">
+                <h1>Welcome to TinTraverse</h1>
+                <p>Your adventure starts here!</p>
+                <form class="search-form">
+                    <input type="text" class="form-control" placeholder="Search Tourist Spot" aria-label="Search Tourist Spot">
+                    <button type="submit" class="btn btn-primary mt-2">Search</button>
+                </form>
             </div>
         </div>
     </section>
 
-    <!-- Project Section -->
-<section id="project-section" style="display: none;" class="project main-content">  
-    <div class="project-content">
-        <h1>My Project!</h1>
-        <div class="button-container">
-            <a href="Project1/index.html" class="project-button">Project 1</a>
-            <a href="project2.html" class="project-button">Project 2</a>
-            <a href="project3.html" class="project-button">Project 3</a>
+    <!-- Tourist Destinations Section -->
+    <section id="destinations">
+        <div class="container destinations"> 
+            <h2 class="text-center">Destinations</h2>
+            <div class="row">
+                <!-- Card 1 -->
+                <div class="col-md-4">
+                    <div class="card destination-card small-card" data-toggle="modal" data-target="#destinationModal1">
+                        <img src="images/pic2.png" class="card-img-top" alt="Paris, France">
+                        <div class="card-body">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="col-md-4">
+                    <div class="card destination-card small-card" data-toggle="modal" data-target="#destinationModal2">
+                        <img src="images/pic3.png" class="card-img-top" alt="Seoul, Korea"> 
+                        <div class="card-body">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-md-4">
+                    <div class="card destination-card small-card" data-toggle="modal" data-target="#destinationModal3">
+                        <img src="images/pic4.png" class="card-img-top" alt="Singapore"> 
+                        <div class="card-body">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="project-image">
-            <img src="images/pic2.png" alt="Project Image" class="project-img">
+    </section>
+
+    <!-- Offers Section -->
+    <section id="offers" class="offers-section">
+         <div class="overlay"></div>
+             <div class="container">
+               <div class="offers-content text-center text-white">
+                </div>
+              </div>
+        </section>
+
+   <!-- About Us Section -->
+    <section id="about-us" class="about-us-section">
+         <div class="container text-center">     
+            </div>
+    </section>
+
+    <!-- Modal for Card 1 -->
+    <div class="modal fade" id="destinationModal1" tabindex="-1" role="dialog" aria-labelledby="destinationModalLabel1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="destinationModalLabel1">Paris, France</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/pic5.png" class="img-fluid" alt="Paris, France">
+                </div>
+                <div class="modal-body">
+                    <img src="images/pic9.png" class="img-fluid" alt="Another view of Paris">
+                </div>
+                <div class="modal-body">
+                    <img src="images/pic10.png" class="img-fluid" alt="Another view of Paris">
+                </div>
+                <div class="modal-body">
+                    <img src="images/pic11.png" class="img-fluid" alt="Another view of Paris">
+                </div>
+                <div class="modal-body">
+                    <img src="images/pic12.png" class="img-fluid" alt="Another view of Paris">
+                </div>
+                <div class="modal-body">
+                    <img src="images/pic13.png" class="img-fluid" alt="Another view of Paris">
+                </div>
+            </div>
         </div>
     </div>
-</section>
 
-    <script>
-    document.addEventListener('DOMContentLoaded', function () {
-    // Function for smooth section transitions
-    function smoothTransition(hideSectionId, showSectionId) {
-        const hideSection = document.getElementById(hideSectionId);
-        const showSection = document.getElementById(showSectionId);
+    <!-- Modal for Card 2 -->
+    <div class="modal fade" id="destinationModal2" tabindex="-1" role="dialog" aria-labelledby="destinationModalLabel2" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="destinationModalLabel2">Seoul, Korea</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/pic6.png" class="img-fluid" alt="Seoul, Korea">
+                </div>
+                <div class="modal-body">
+                    <img src="images/pic14.png" class="img-fluid" alt="Seoul, Korea">
+                </div>
+                <div class="modal-body">
+                    <img src="images/pic15.png" class="img-fluid" alt="Seoul, Korea">
+                </div>
+                <div class="modal-body">
+                    <img src="images/pic16.png" class="img-fluid" alt="Seoul, Korea">
+                </div>
+                <div class="modal-body">
+                    <img src="images/pic17.png" class="img-fluid" alt="Seoul, Korea">
+                </div>
+                <div class="modal-body">
+                    <img src="images/pic18.png" class="img-fluid" alt="Seoul, Korea">
+                </div>
+            </div>
+        </div>
+    </div>
 
-        hideSection.style.opacity = '0';
-        setTimeout(() => {
-            hideSection.style.display = 'none';  // After fade-out, hide the section
+    <!-- Modal for Card 3 -->
+    <div class="modal fade" id="destinationModal3" tabindex="-1" role="dialog" aria-labelledby="destinationModalLabel3" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="destinationModalLabel3">Singapore</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/pic7.png" class="img-fluid" alt="Singapore">
+                </div>
+                <div class="modal-body">
+                    <img src="images/pic19.png" class="img-fluid" alt="Singapore">
+                </div>
+                <div class="modal-body">
+                    <img src="images/pic20.png" class="img-fluid" alt="Singapore">
+                </div>
+                <div class="modal-body">
+                    <img src="images/pic21.png" class="img-fluid" alt="Singapore">
+                </div>
+                <div class="modal-body">
+                    <img src="images/pic22.png" class="img-fluid" alt="Singapore">
+                </div>
+                <div class="modal-body">
+                    <img src="images/pic23.png" class="img-fluid" alt="Singapore">
+                </div>
+            </div>
+        </div>
+    </div>
 
-            showSection.style.display = 'flex'; // Display the new section
-            setTimeout(() => {
-                showSection.style.opacity = '1';  // After small delay, start fade-in
-            }, 50);
-        }, 300);  // Duration matches the CSS transition for smoothness
-    }
+    <footer>
+        <p>&copy; 2024 TinTraverse. All rights reserved.</p>
+    </footer>
 
-    // Function to highlight the active navigation link
-    function highlightLink(activeLinkId, ...inactiveLinkIds) {
-        const activeLink = document.getElementById(activeLinkId);
-        if (activeLink) {
-            activeLink.classList.add('active');
-        }
-        inactiveLinkIds.forEach(id => {
-            const link = document.getElementById(id);
-            if (link) {
-                link.classList.remove('active');
-            }
-        });
-    }
-
-    // Event listeners for navigation
-    document.getElementById('about-link').addEventListener('click', function (e) {
-        e.preventDefault();
-        smoothTransition(document.querySelector('section:not([style*="display: none;"])').id, 'about-section');
-        highlightLink('about-link', 'home-link', 'project-link', 'contact-link');
-    });
-
-    document.getElementById('project-link').addEventListener('click', function (e) {
-        e.preventDefault();
-        smoothTransition(document.querySelector('section:not([style*="display: none;"])').id, 'project-section');
-        highlightLink('project-link', 'home-link', 'about-link', 'contact-link');
-    });
-
-    document.getElementById('home-link').addEventListener('click', function (e) {
-        e.preventDefault();
-        smoothTransition(document.querySelector('section:not([style*="display: none;"])').id, 'home-section');
-        highlightLink('home-link', 'about-link', 'project-link', 'contact-link');
-    });
-});
-
-
-    </script>
-    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
-
 </html>
-
-
-
