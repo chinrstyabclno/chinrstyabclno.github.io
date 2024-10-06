@@ -74,7 +74,7 @@
             <h1>My Projects!</h1>
             <div class="button-container">
                 <a href="https://chinrstyabclno.github.io/Project1/" class="project-button" id="project1-link">Project 1</a>
-                <a href="#" class="project-button" id="project2-link">Project 2</a>
+                <a href="https://chinrstyabclno.github.io/Project2/" class="project-button" id="project2-link">Project 2</a>
                 <a href="#" class="project-button" id="project3-link">Project 3</a>
             </div>
             <div class="project-image">
@@ -138,27 +138,26 @@
         // Event listeners for navigation
         document.getElementById('project1-link').addEventListener('click', function (e) {
             e.preventDefault(); // Prevent default anchor behavior
-            window.location.href = 'Project1/index.html'; // Redirect to Project 1
+            window.location.href = 'https://chinrstyabclno.github.io/Project1/'; // Redirect to Project 1
+        });
+
+        // Event listener for Project 2 button
+        document.getElementById('project2-link').addEventListener('click', function (e) {
+            e.preventDefault();
+            window.location.href = 'https://chinrstyabclno.github.io/Project2/'; // Redirect to Project 2
+        });
+
+        // Optional Event listener for Project 3 button
+        document.getElementById('project3-link').addEventListener('click', function (e) {
+            e.preventDefault();
+            smoothTransition(document.querySelector('section:not([style*="display: none;"])').id, 'project3-section');
+            highlightLink('project3-link', 'home-link', 'about-link', 'project-link', 'contact-link');
         });
 
         document.getElementById('about-link').addEventListener('click', function (e) {
             e.preventDefault();
             smoothTransition(document.querySelector('section:not([style*="display: none;"])').id, 'about-section');
             highlightLink('about-link', 'home-link', 'project-link', 'contact-link');
-        });
-
-        // Event listener for Project 2 button
-        document.getElementById('project2-link').addEventListener('click', function (e) {
-            e.preventDefault();
-            smoothTransition(document.querySelector('section:not([style*="display: none;"])').id, 'project2-section');
-            highlightLink('project2-link', 'home-link', 'about-link', 'project-link', 'contact-link');
-        });
-
-        // (Optional) Add event listener for Project 3 button
-        document.getElementById('project3-link').addEventListener('click', function (e) {
-            e.preventDefault();
-            smoothTransition(document.querySelector('section:not([style*="display: none;"])').id, 'project3-section');
-            highlightLink('project3-link', 'home-link', 'about-link', 'project-link', 'contact-link');
         });
 
         document.getElementById('project-link').addEventListener('click', function (e) {
