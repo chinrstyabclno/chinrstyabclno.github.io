@@ -144,11 +144,15 @@
             window.location.href = 'https://chinrstyabclno.github.io/Project1/'; // Redirect to Project 1
         });
 
+        // ... (previous code) ...
+
         // Event listener for Project 2 button
         document.getElementById('project2-link').addEventListener('click', function (e) {
-            e.preventDefault();
-            smoothTransition(document.querySelector('section:not([style*="display: none;"])').id, 'project2-section', 'https://chinrstyabclno.github.io/Project2/');
+        e.preventDefault(); // Prevent default anchor behavior
+        window.location.href = 'https://chinrstyabclno.github.io/Project2/'; // Redirect to Project 2 website
         });
+
+// ... (rest of the code) ...
 
         // Optional Event listener for Project 3 button
         document.getElementById('project3-link').addEventListener('click', function (e) {
