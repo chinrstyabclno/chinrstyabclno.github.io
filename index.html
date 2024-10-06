@@ -68,13 +68,13 @@
         </div>
     </section>
 
-  <!-- Project Section -->
-<section id="project-section" style="display: none;" class="project main-content">  
+ <!-- Project Section -->
+<section id="project-section" style="display: flex;" class="project main-content">  
     <div class="project-content">
         <h1>My Projects!</h1>
         <div class="button-container">
             <a href="https://chinrstyabclno.github.io/Project1/" class="project-button" id="project1-link">Project 1</a>
-            <a href="#" class="project-button" id="project2-link">Project 2</a> <!-- Fixed id here -->
+            <a href="#" class="project-button" id="project2-link">Project 2</a>
             <a href="#" class="project-button" id="project3-link">Project 3</a>
         </div>
         <div class="project-image">
@@ -127,12 +127,14 @@
         smoothTransition(document.querySelector('section:not([style*="display: none;"])').id, 'about-section');
         highlightLink('about-link', 'home-link', 'project-link', 'contact-link');
     });
-
+    
+    // Event listener for Project 2 button
     document.getElementById('project2-link').addEventListener('click', function (e) {
-        e.preventDefault();
-        smoothTransition(document.querySelector('section:not([style*="display: none;"])').id, 'project2-section');
-        highlightLink('project2-link', 'home-link', 'about-link', 'project-link', 'contact-link');
+    e.preventDefault();
+    smoothTransition(document.querySelector('section:not([style*="display: none;"])').id, 'project2-section');
+    highlightLink('project2-link', 'home-link', 'about-link', 'project-link', 'contact-link');
     });
+
 
     document.getElementById('project3-link').addEventListener('click', function (e) {
         e.preventDefault();
