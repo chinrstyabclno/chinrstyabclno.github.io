@@ -71,17 +71,40 @@
     <!-- Project Section -->
 <section id="project-section" style="display: none;" class="project main-content">  
     <div class="project-content">
-        <h1>My Project!</h1>
+        <h1>My Projects!</h1>
         <div class="button-container">
-    <a href="https://chinrstyabclno.github.io/Project1/" class="project-button" id="project1-link">Project 1</a>
-    <a href="#" class="project-button" id="project2-link">Project 2</a>
-    <a href="#" class="project-button" id="project3-link">Project 3</a>
-</div>
+            <a href="https://chinrstyabclno.github.io/Project1/" class="project-button" id="project1-link">Project 1</a>
+            <a href="#" class="project-button" id="project2-link">Project 2</a>
+            <a href="#" class="project-button" id="project3-link">Project 3</a>
+        </div>
         <div class="project-image">
-            <img src="images/pic2.png" alt="Project Image" class="project-img">
+            <img src="images/pic2.png" alt="Project Image" class="project-img" id="project1-img">
         </div>
     </div>
 </section>
+
+<!-- Project 2 Section -->
+<section id="project2-section" style="display: none;" class="project main-content">
+    <div class="project-content">
+        <h1>Project 2 Title</h1>
+        <p>Description of Project 2.</p>
+        <div class="project-image">
+            <img src="images/project2-image.png" alt="Project 2 Image" class="project-img">
+        </div>
+    </div>
+</section>
+
+<!-- Ensure you have an id for the Project 3 section if needed -->
+<section id="project3-section" style="display: none;" class="project main-content">
+    <div class="project-content">
+        <h1>Project 3 Title</h1>
+        <p>Description of Project 3.</p>
+        <div class="project-image">
+            <img src="images/project3-image.png" alt="Project 3 Image" class="project-img">
+        </div>
+    </div>
+</section>
+
     
     <script>
         // Function for smooth section transitions
@@ -120,6 +143,20 @@ document.getElementById('about-link').addEventListener('click', function (e) {
     smoothTransition(document.querySelector('section:not([style*="display: none;"])').id, 'about-section');
     highlightLink('about-link', 'home-link', 'project-link', 'contact-link');
 });
+
+document.getElementById('project2-link').addEventListener('click', function (e) {
+    e.preventDefault();
+    smoothTransition(document.querySelector('section:not([style*="display: none;"])').id, 'project2-section');
+    highlightLink('project2-link', 'home-link', 'about-link', 'project-link', 'contact-link');
+});
+
+// (Optional) Add event listener for Project 3 button
+document.getElementById('project3-link').addEventListener('click', function (e) {
+    e.preventDefault();
+    smoothTransition(document.querySelector('section:not([style*="display: none;"])').id, 'project3-section');
+    highlightLink('project3-link', 'home-link', 'about-link', 'project-link', 'contact-link');
+});
+
 
 document.getElementById('project-link').addEventListener('click', function (e) {
     e.preventDefault();
