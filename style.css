@@ -1,0 +1,23 @@
+body {
+    background-color: white; 
+    color: black;            
+  }
+  
+  body.dark-mode {
+    background-color: #000000;  
+    color: white;            
+  }
+  
+  .card {
+    background-color: #495057;  
+    color: white;            
+  }
+ 
+  .card-title, .card-text {
+    color: inherit; 
+  }
+  
+  body {
+    padding-top: 80px; 
+  }
+  
