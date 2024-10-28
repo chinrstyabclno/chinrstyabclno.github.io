@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Custom styles */
 body[data-bs-theme="dark"] {
   background-color: #1a1a1a;
@@ -47,3 +48,54 @@ body[data-bs-theme="light"] {
   font-weight: bold;
 }
 
+=======
+/* Custom styles */
+body[data-bs-theme="dark"] {
+  background-color: #1a1a1a;
+  color: #f8f9fa;
+}
+
+body[data-bs-theme="light"] {
+  background-color: #f8f9fa;
+  color: #212529;
+}
+
+.footer {
+  background-color: green;
+}
+
+.shadow {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Card styles */
+.card {
+  width: 100%; /* Make the card full width of its column */
+  height: auto; /* Let the card height adjust automatically */
+  border-radius: 10px; /* Optional: rounded corners */
+  margin-bottom: 15px; /* Add spacing between cards */
+}
+
+.card img {
+  object-fit: cover; /* Ensure the image covers the card area without distortion */
+  height: 200px; /* Fixed height for images */
+  width: 100%; /* Full width of the card */
+}
+
+.second-row-card {
+  margin-top: 30px; /* Adjust the value as needed */
+}
+
+/* Adjust spacing between cards on mobile screens */
+@media (max-width: 576px) {
+  .card {
+    margin-bottom: 20px; /* More space between cards on smaller screens */
+  }
+}
+
+.nav-link.active {
+  color: #ef5b9c; /* Change this to your desired active color */
+  font-weight: bold;
+}
+
+>>>>>>> bdffb4a20b8f77a190a5ac391fe7e59ce3517666
