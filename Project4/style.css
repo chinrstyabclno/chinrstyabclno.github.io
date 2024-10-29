@@ -1,0 +1,27 @@
+/* Default light mode styles */
+body {
+    background-color: white; /* Light background */
+    color: black;            /* Light mode text color */
+  }
+  
+  /* Dark mode styles */
+  body.dark-mode {
+    background-color: #000000;  /* Dark background */
+    color: white;            /* Dark mode text color */
+  }
+  
+  /* Additional styles for the card elements in dark mode */
+  .card {
+    background-color: #495057;  /* Card background in dark mode */
+    color: white;            /* Card text color in dark mode */
+  }
+  
+  /* Make sure the card titles and text are distinguishable */
+  .card-title, .card-text {
+    color: inherit; /* Use the color of the card background */
+  }
+  
+  body {
+    padding-top: 80px; /* Adjust this value based on the navbar height */
+  }
+  
