@@ -76,7 +76,7 @@
             <a href="https://chinrstyabclno.github.io/Project1/" class="project-button" id="project1-link">Project 1</a>
             <a href="https://chinrstyabclno.github.io/Project2/" class="project-button" id="project2-link">Project 2</a>
             <a href="https://chinrstyabclno.github.io/Project3/" class="project-button" id="project3-link">Project 3</a>
-            <a href="https://chinrstyabclno.github.io/Project4/" class="project-button" id="project4-link">Project 4</a>
+            <a href="https://chinrstyabclno.github.io/Project4/" class="project-button">Project 4</a>
             <a href="https://chinrstyabclno.github.io/Project5/" class="project-button" id="project5-link">Project 5</a>
             <a href="https://chinrstyabclno.github.io/Project6/" class="project-button" id="project6-link">Project 6</a>
             <a href="https://chinrstyabclno.github.io/Project7/" class="project-button" id="project7-link">Project 7</a>
@@ -133,9 +133,9 @@
 
     document.getElementById('project4-link').addEventListener('click', function (e) {
     e.preventDefault(); // Prevent the default link behavior
+    console.log("Project 4 button clicked!"); // Check if this logs when the button is clicked
     window.location.href = "https://chinrstyabclno.github.io/Project4/"; // Navigate to Project 4
     });
-
 
     // Ensure all project links navigate correctly
     const projectLinks = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
