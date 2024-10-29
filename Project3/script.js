@@ -268,4 +268,4 @@ function setActive(link) {
   // Add 'active' class to the clicked link
   link.classList.add('active');
 }
->>>>>>> bdffb4a20b8f77a190a5ac391fe7e59ce3517666
+>>>>>>>>> Temporary merge branch 2
