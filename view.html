@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character List</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="body"> <!-- Added id for theme toggling -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <a class="navbar-brand" href="#">
+            <img src="images/logo.png" alt="Logo" style="width: 60px;">
+        </a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="view.html">Character List</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="species.html">Species</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+            </ul>
+        </div>
+        <button id="mode-toggle" class="btn btn-secondary">Mode</button>
+    </nav>
+    
+    
+    <div class="container mt-5">
+        <h1 class="text-center">Characters</h1>
+        <div id="character-list" class="row"></div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <script>
+        const characterList = document.getElementById('character-list');
+        const modeToggle = document.getElementById('mode-toggle');
+        let isDarkMode = false;
+
+        async function fetchAllCharacters() {
+            let currentPage = 1;
+            let totalPages = 1;
+
+            while (currentPage <= totalPages) {
+                const response = await fetch(`https://rickandmortyapi.com/api/character?page=${currentPage}`);
+                const data = await response.json();
+                totalPages = data.info.pages; // Get total pages
+
+                data.results.forEach(character => {
+                    const col = document.createElement('div');
+                    col.className = 'col-md-4 mb-4';
+                    col.innerHTML = `
+                        <div class="card">
+                            <img src="${character.image}" class="card-img-top" alt="${character.name}">
+                            <div class="card-body">
+                                <h5 class="card-title">${character.name}</h5>
+                                <p class="card-text">Status: ${character.status}</p>
+                                <!-- Removed the View Details button -->
+                            </div>
+                        </div>
+                    `;
+                    characterList.appendChild(col);
+                });
+
+                currentPage++; // Move to the next page
+            }
+        }
+
+        modeToggle.addEventListener('click', () => {
+            isDarkMode = !isDarkMode;
+            document.body.classList.toggle('dark-mode', isDarkMode);
+        });
+
+        fetchAllCharacters();
+    </script>
+</body>
+</html>

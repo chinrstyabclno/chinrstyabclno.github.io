@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!doctype html>
 <html lang="en">
 
@@ -96,3 +97,103 @@
 
 </html>
 
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="body">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <a class="navbar-brand" href="#">
+            <img src="images/logo.png" alt="Logo" style="width: 60px;">
+        </a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="view.html">Character List</a></li>
+                <li class="nav-item"><a class="nav-link" href="species.html">Species</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            </ul>
+        </div>
+        <button id="mode-toggle" class="btn btn-secondary">Mode</button>
+    </nav>
+    
+    <div class="container mt-5">
+        <h1>About Rick and Morty</h1>
+        <p>Rick and Morty is an American animated science fiction sitcom created by Justin Roiland and Dan Harmon. The series follows the misadventures of an eccentric, alcoholic scientist named Rick Sanchez and his good-hearted but fretful grandson Morty Smith, who split their time between domestic life and interdimensional adventures.</p>
+        <p>The show is known for its dark humor, complex storytelling, and a deep philosophical exploration of existential themes.</p>
+
+        <h2 class="mt-5">All Episodes</h2>
+        <p>Here are some episodes from Rick and Morty that you can explore and enjoy! Use the search feature to find and view details of specific episodes.</p>
+
+        <div id="episodes-list" class="row mt-3"></div> <!-- Container for episodes -->
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Dark/Light Mode Toggle and Episodes Fetch Script -->
+    <script>
+        let colorMode = localStorage.getItem("colorMode") || "light";
+
+        function applyTheme() {
+            const bodyElement = document.getElementById("body");
+            bodyElement.setAttribute("data-bs-theme", colorMode);
+            if (colorMode === "dark") {
+                bodyElement.style.backgroundColor = "#121212";
+                bodyElement.style.color = "#ffffff";
+            } else {
+                bodyElement.style.backgroundColor = "#ffffff";
+                bodyElement.style.color = "#000000";
+            }
+        }
+
+        function changeMode() {
+            colorMode = colorMode === "dark" ? "light" : "dark";
+            localStorage.setItem("colorMode", colorMode);
+            applyTheme();
+        }
+
+        document.addEventListener("DOMContentLoaded", applyTheme);
+        document.getElementById("mode-toggle").addEventListener("click", changeMode);
+
+        async function fetchAllEpisodes() {
+            let currentPage = 1;
+            let totalPages = 1;
+            const episodesList = document.getElementById('episodes-list');
+
+            while (currentPage <= totalPages) {
+                const response = await fetch(`https://rickandmortyapi.com/api/episode?page=${currentPage}`);
+                const data = await response.json();
+                totalPages = data.info.pages;
+
+                data.results.forEach(episode => {
+                    const col = document.createElement('div');
+                    col.className = 'col-md-4 mb-4';
+                    col.innerHTML = `
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">${episode.name}</h5>
+                                <p class="card-text">Air Date: ${episode.air_date}</p>
+                                <p class="card-text">Episode: ${episode.episode}</p>
+                            </div>
+                        </div>
+                    `;
+                    episodesList.appendChild(col);
+                });
+                currentPage++;
+            }
+        }
+
+        fetchAllEpisodes();
+    </script>
+</body>
+</html> 
+>>>>>>> d6797aae9aece319ba3fdff832be327980320c35
