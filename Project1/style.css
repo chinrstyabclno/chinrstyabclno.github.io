@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+section {
+    padding: 40px 0;
+}
+
+.image-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px; /* Space between the image cards and the content section */
+}
+
+.card {
+    background-color: #f7f7f7;
+    width: 23%;  /* Adjusted to allow for 4 cards in a row */
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover .card-image {
+    transform: scale(1.05); /* This makes the image "pop" when hovered */
+}
+
+h2 {
+    color: black;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+h3 {
+    margin-top: 10px;
+    font-size: 1.3rem;
+    color: black;
+}
+
+p {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #e6c300;
+    color: black;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 0.9rem;
+    border-top: 4px solid #ccaa00;
+}
