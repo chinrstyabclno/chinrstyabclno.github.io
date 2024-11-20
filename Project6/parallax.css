@@ -1,0 +1,144 @@
+.keyart,
+.keyart_layer {
+	height: 1000px;
+}
+
+.keyart {
+	position: relative;
+	z-index: 10;
+}
+
+.keyart_layer {
+	background-position: bottom center;
+	background-size: auto 1038px;
+	background-repeat: repeat-x;
+	width: 100%;
+	position: absolute;
+}
+
+.keyart_layer.parallax {
+	position: fixed;
+}
+
+.main-content {
+	width: 100%;
+	position: absolute;
+	z-index: 200;
+}
+
+#keyart-0 {
+	background-image: url(img/parallax0.jpg);
+}
+
+#keyart-1 {
+    background-image: url(img/parallax1.png);
+    height: 297px;
+    width: 311px;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    left: 32px;
+    top: 254px;
+    border-radius: 50%;
+}
+
+#keyart-2 {
+    background-image: url(img/parallax2.png);
+    height: 260px;
+    width: 260px;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    left: 59px;
+    top: 601px;
+    border-radius: 50%;
+}
+
+#keyart-3 {
+    background-image: url(img/parallax3.png);
+    height: 330px;
+    width: 330px;
+    background-size: cover;  
+    background-position: center; 
+    position: absolute;
+    left: 289px;
+    top: 47px;
+    border-radius: 50%;  
+}
+
+
+#keyart-4 {
+    background-image: url(img/parallax4.png);
+    height: 275px;
+    width: 314px;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    left: 580px;
+    top: 24px;
+    border-radius: 50%;
+}
+
+#keyart-5 {
+    background-image: url(img/parallax5.png);
+    height: 298px;
+    width: 287px;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    left: 930px;
+    top: 56px;
+    border-radius: 50%;
+}
+
+#keyart-6 {
+    background-image: url(img/parallax6.png); 
+    height: 367px;  
+    width: 366px;   
+    background-size: cover;  
+    background-position: center;  
+    position: absolute;  
+    left: 1260px;   
+    top: 20px;    
+    border-radius: 50%; 
+}
+
+#keyart-7 {
+    background-image: url(img/parallax7.png);  
+    height: 327px;  
+    width: 327px;   
+    background-size: cover;  
+    background-position: center;  
+    position: absolute;  
+    left: 1573px;   
+    top: 247px;   
+    border-radius: 50%;  
+}
+
+#keyart-8 {
+    background-image: url(img/parallax8.png);  
+    height: 356px;  
+    width: 394px;   
+    background-size: cover;  
+    background-position: center;  
+    position: absolute;
+    left: 1484px;   
+    top: 601px;     
+    border-radius: 50%;  
+}
+
+#keyart-9 {
+    background-image: url(img/parallax9.png);  
+    height: 585px;  
+    width: 1117px; 
+    background-size: cover;  
+    background-position: center;  
+    position: absolute;  
+    left: 356px;   
+    top: 574px;   
+    border-radius: 50%;  
+}
+
+#keyart-scrim {
+	opacity: 0;
+}

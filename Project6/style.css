@@ -1,0 +1,371 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.center-text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 3em;  
+	color: white; 
+	text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);  
+	font-family: 'League Spartan', sans-serif; 
+	z-index: 1000; 
+  }
+  
+.mercury-image {
+    position: absolute;
+    top: 35px;
+    left: -8px;
+    height: 582px;
+    width: 566px;
+    transform-origin: center;
+    animation: rotateMercury 10s linear infinite;
+    z-index: 1000;
+}
+
+@keyframes rotateMercury {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.mercury-text {
+    position: absolute;
+    top: 150px;
+    left: 574px;
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+    font-family: 'League Spartan', sans-serif;
+    z-index: 1001;
+}
+
+.mercury-description {
+    position: absolute;
+    top: 189px;
+    left: 557px;
+    font-size: 1em;
+    color: white;
+    font-family: 'League Spartan', sans-serif;
+    width: 300px; 
+    line-height: 1.5em;
+    z-index: 1001;
+}
+
+.venus-image {
+    position: absolute;
+    top: 50px;
+    left: 850px;
+    height: 582px;
+    width: 566px;
+    z-index: 1000;
+	transform-origin: center; 
+    animation: rotateVenus 10s linear infinite;
+}
+
+@keyframes rotateVenus {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.venus-text {
+    position: absolute;
+    top: 150px;
+    left: 1470px;
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+    font-family: 'League Spartan', sans-serif;
+    z-index: 1001;
+}
+
+.venus-description {
+    position: absolute;
+    top: 189px;
+    left: 1450px;
+    font-size: 1em;
+    color: white;
+    font-family: 'League Spartan', sans-serif;
+    width: 300px; 
+    line-height: 1.5em;
+    z-index: 1001;
+}
+
+.earth-image {
+    position: absolute;
+    top: 601px;
+    left: -8px;
+    height: 582px;
+    width: 566px;
+    z-index: 1000;
+    transform-origin: center; 
+    animation: rotateEarth 10s linear infinite; 
+}
+
+.earth-text {
+    position: absolute;
+    top: 650px;
+    left: 560px;
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+    font-family: 'League Spartan', sans-serif;
+    z-index: 1001;
+}
+
+.earth-description {
+    position: absolute;
+    top: 683px;
+    left: 563px;
+    font-size: 1em;
+    color: white;
+    font-family: 'League Spartan', sans-serif;
+    width: 300px; 
+    line-height: 1.5em;
+    z-index: 1001;
+}
+
+@keyframes rotateEarth {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.mars-image {
+	position: absolute;
+	top: 600px;
+	left: 850px;
+	height: 582px;
+	width: 582px; 
+	z-index: 1000;
+	transform-origin: center;
+	animation: rotateMars 10s linear infinite;
+	border-radius: 50%; 
+	object-fit: cover; 
+}
+
+.mars-text {
+	position: absolute;
+	top: 630px;
+	left: 1450px;
+	font-size: 2em;
+	font-weight: bold;
+	color: white;
+	font-family: 'League Spartan', sans-serif;
+	z-index: 1001;
+}
+
+.mars-description {
+	position: absolute;
+	top: 669px;
+	left: 1450px;
+	font-size: 1em;
+	color: white;
+	font-family: 'League Spartan', sans-serif;
+	width: 300px;
+	line-height: 1.5em;
+	z-index: 1001;
+}
+
+@keyframes rotateMars {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+
+.jupiter-image {
+    position: absolute;
+    top: 1150px; 
+    left: -8px; 
+    height: 582px;
+    width: 566px; 
+    z-index: 1000;
+    transform-origin: center;
+    animation: rotateJupiter 10s linear infinite; 
+    border-radius: 50%; 
+    object-fit: cover; 
+}
+
+.jupiter-text {
+    position: absolute;
+    top: 1250px; 
+    left: 550px; 
+    font-size: 2em; 
+    font-weight: bold;
+    color: white;
+    font-family: 'League Spartan', sans-serif;
+    z-index: 1001;
+}
+
+.jupiter-description {
+    position: absolute;
+    top: 1293px; 
+    left: 560px; 
+    font-size: 1em;
+    color: white;
+    font-family: 'League Spartan', sans-serif;
+    width: 300px; 
+    line-height: 1.5em;
+    z-index: 1001;
+}
+
+@keyframes rotateJupiter {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.saturn-image {
+    position: absolute;
+    top: 1150px; 
+    left: 850px; 
+    height: 582px;
+    width: 566px; 
+    z-index: 1000;
+    transform-origin: center; 
+    animation: rotateJupiter 10s linear infinite; 
+    border-radius: 50%; 
+    object-fit: cover; 
+}
+
+.saturn-text {
+    position: absolute;
+    top: 1250px; 
+    left: 1450px; 
+    font-size: 2em; 
+    font-weight: bold;
+    color: white;
+    font-family: 'League Spartan', sans-serif;
+    z-index: 1001;
+}
+
+.saturn-description {
+    position: absolute;
+    top: 1300px; 
+    left: 1450px; 
+    font-size: 1em;
+    color: white;
+    font-family: 'League Spartan', sans-serif;
+    width: 300px; 
+    line-height: 1.5em;
+    z-index: 1001;
+}
+
+@keyframes rotateSaturn {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.uranus-image {
+    position: absolute;
+    top: 1750px; 
+    left: -8px; 
+    height: 582px;
+    width: 566px; 
+    z-index: 1000;
+    transform-origin: center; 
+    animation: rotateJupiter 10s linear infinite; 
+    border-radius: 50%; 
+    object-fit: cover; 
+}
+
+.uranus-text {
+    position: absolute;
+    top: 1750px;
+    left: 550px; 
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+    font-family: 'League Spartan', sans-serif;
+    z-index: 1001;
+}
+
+.uranus-description {
+    position: absolute;
+    top: 1800px; 
+    left: 550px;
+    font-size: 1em;
+    color: white;
+    font-family: 'League Spartan', sans-serif;
+    width: 300px; 
+    line-height: 1.5em;
+    z-index: 1001;
+}
+
+@keyframes rotateUranus {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.neptune-image {
+    position: absolute;
+    top: 1750px; 
+    left: 850px; 
+    height: 582px;
+    width: 566px; 
+    z-index: 1000;
+    transform-origin: center; 
+    animation: rotateJupiter 10s linear infinite; 
+    border-radius: 50%; 
+    object-fit: cover; 
+}
+
+.neptune-text {
+    position: absolute;
+    top: 1750px; 
+    left: 1450px; 
+    font-size: 2em; 
+    font-weight: bold;
+    color: white;
+    font-family: 'League Spartan', sans-serif;
+    z-index: 1001;
+}
+
+.neptune-description {
+    position: absolute;
+    top: 1800px; 
+    left: 1450px; 
+    font-size: 1em;
+    color: white;
+    font-family: 'League Spartan', sans-serif;
+    width: 300px; 
+    line-height: 1.5em;
+    z-index: 1001;
+}
+
+@keyframes rotateNeptune {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
