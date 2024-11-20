@@ -1,339 +1,229 @@
-<<<<<<< HEAD
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travel Explorer</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css"> <!-- Link to the external CSS file -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TinTraverse</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  
+  <!-- Link to external CSS file -->
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .navbar .nav-link {
+      color: black !important;
+    }
+
+    /* Text Styling for Hero Section */
+    .hero-section {
+      text-align: center;
+      color: white;
+      margin-top: 20%;
+    }
+    .hero-section h1 {
+      font-size: 4rem; /* Big Font Size for the Title */
+    }
+    .hero-section p {
+      font-size: 1.5rem; /* Slightly Smaller Font Size for the Subtitle */
+    }
+  </style>
 </head>
-<body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">TinTraverse</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#destinations">Destinations</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#offers">Offers</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about-us">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link btn btn-primary text-white ml-3" href="#">Sign Up</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link btn btn-outline-primary ml-2" href="#">Login</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>    
 
-    <!-- Hero Section -->
-    <section id="home" class="hero-section">
-        <div class="overlay"></div>
-        <div class="container">
-            <div class="hero-content text-center text-white">
-                <h1>Welcome to TinTraverse</h1>
-                <p>Your adventure starts here!</p>
-                <form class="search-form">
-                    <input type="text" class="form-control" placeholder="Search Tourist Spot" aria-label="Search Tourist Spot">
-                    <button type="submit" class="btn btn-primary mt-2">Search</button>
-                </form>
-            </div>
-        </div>
-    </section>
+<body style="background-image: url('images/pic1.png'); background-size: contain; background-position: center center; min-height: 100vh; margin: 0; font-family: 'Times New Roman', Times, serif; color: rgba(255, 255, 255, 0.5);">
 
-    <!-- Tourist Destinations Section -->
-    <section id="destinations">
-        <div class="container destinations"> 
-            <h2 class="text-center">Destinations</h2>
-            <div class="row">
-                <!-- Card 1 -->
-                <div class="col-md-4">
-                    <div class="card destination-card small-card" data-toggle="modal" data-target="#destinationModal1">
-                        <img src="images/pic2.png" class="card-img-top" alt="Paris, France">
-                        <div class="card-body">
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Card 2 -->
-                <div class="col-md-4">
-                    <div class="card destination-card small-card" data-toggle="modal" data-target="#destinationModal2">
-                        <img src="images/pic3.png" class="card-img-top" alt="Seoul, Korea"> 
-                        <div class="card-body">
-                        </div>
-                    </div>
-                </div>
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #ffffff; padding: 15px 0;">
+    <div class="container-fluid">
+      <!-- Text Logo (instead of an image) -->
+      <a class="navbar-brand mx-auto" href="#" style="font-size: 36px; font-weight: bold; color: #333;">TinTraverse</a>      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#destinations">Destinations</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#offers">Offers</a> <!-- Link to Offers -->
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about-us">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn btn-primary text-white ml-3" href="#">Sign Up</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn btn-outline-primary ml-2" href="#">Login</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-                <!-- Card 3 -->
-                <div class="col-md-4">
-                    <div class="card destination-card small-card" data-toggle="modal" data-target="#destinationModal3">
-                        <img src="images/pic4.png" class="card-img-top" alt="Singapore"> 
-                        <div class="card-body">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- Hero Section with Centered Text -->
+  <section class="hero-section" style="text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 100vh; margin-top: -10%;">
+    <h1>Welcome to TinTraverse</h1>
+    <p>Your adventure starts here!</p>
+  </section>
 
-    <!-- Offers Section -->
-    <section id="offers" class="offers-section">
-         <div class="overlay"></div>
-             <div class="container">
-               <div class="offers-content text-center text-white">
-                </div>
+  <!-- Destinations Section -->
+  <section id="destinations" style="background-color: white; padding: 50px 0;">
+    <div class="container destinations"> 
+      <h2 class="text-center">Destinations</h2>
+      <div class="row">
+          <!-- Card 1 -->
+          <div class="col-md-4">
+              <div class="card destination-card small-card" data-bs-toggle="modal" data-bs-target="#destinationModal1">
+                  <img src="images/pic2.png" class="card-img-top" alt="Paris, France">
+                  <div class="card-body"></div>
               </div>
-        </section>
-
-   <!-- About Us Section -->
-    <section id="about-us" class="about-us-section">
-         <div class="container text-center">     
-            </div>
-    </section>
-
-    <!-- Modal for Card 1 -->
-    <div class="modal fade" id="destinationModal1" tabindex="-1" role="dialog" aria-labelledby="destinationModalLabel1" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="destinationModalLabel1">Paris, France</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <img src="images/pic5.png" class="img-fluid" alt="Paris, France">
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal for Card 2 -->
-    <div class="modal fade" id="destinationModal2" tabindex="-1" role="dialog" aria-labelledby="destinationModalLabel2" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="destinationModalLabel2">Seoul, Korea</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <img src="images/pic6.png" class="img-fluid" alt="Seoul, Korea">
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal for Card 3 -->
-    <div class="modal fade" id="destinationModal3" tabindex="-1" role="dialog" aria-labelledby="destinationModalLabel3" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="destinationModalLabel3">Singapore</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <img src="images/pic7.png" class="img-fluid" alt="Singapore">
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <footer>
-        <p>&copy; 2024 TinTraverse. All rights reserved.</p>
-    </footer>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
-</html>
-=======
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travel Explorer</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css"> <!-- Link to the external CSS file -->
-</head>
-<body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">TinTraverse</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#destinations">Destinations</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#offers">Offers</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about-us">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link btn btn-primary text-white ml-3" href="#">Sign Up</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link btn btn-outline-primary ml-2" href="#">Login</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>    
-
-    <!-- Hero Section -->
-    <section id="home" class="hero-section">
-        <div class="overlay"></div>
-        <div class="container">
-            <div class="hero-content text-center text-white">
-                <h1>Welcome to TinTraverse</h1>
-                <p>Your adventure starts here!</p>
-                <form class="search-form">
-                    <input type="text" class="form-control" placeholder="Search Tourist Spot" aria-label="Search Tourist Spot">
-                    <button type="submit" class="btn btn-primary mt-2">Search</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Tourist Destinations Section -->
-    <section id="destinations">
-        <div class="container destinations"> 
-            <h2 class="text-center">Destinations</h2>
-            <div class="row">
-                <!-- Card 1 -->
-                <div class="col-md-4">
-                    <div class="card destination-card small-card" data-toggle="modal" data-target="#destinationModal1">
-                        <img src="images/pic2.png" class="card-img-top" alt="Paris, France">
-                        <div class="card-body">
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Card 2 -->
-                <div class="col-md-4">
-                    <div class="card destination-card small-card" data-toggle="modal" data-target="#destinationModal2">
-                        <img src="images/pic3.png" class="card-img-top" alt="Seoul, Korea"> 
-                        <div class="card-body">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="col-md-4">
-                    <div class="card destination-card small-card" data-toggle="modal" data-target="#destinationModal3">
-                        <img src="images/pic4.png" class="card-img-top" alt="Singapore"> 
-                        <div class="card-body">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Offers Section -->
-    <section id="offers" class="offers-section">
-         <div class="overlay"></div>
-             <div class="container">
-               <div class="offers-content text-center text-white">
-                </div>
+          </div>
+          
+          <!-- Card 2 -->
+          <div class="col-md-4">
+              <div class="card destination-card small-card" data-bs-toggle="modal" data-bs-target="#destinationModal2">
+                  <img src="images/pic3.png" class="card-img-top" alt="Seoul, Korea"> 
+                  <div class="card-body"></div>
               </div>
-        </section>
-
-   <!-- About Us Section -->
-    <section id="about-us" class="about-us-section">
-         <div class="container text-center">     
-            </div>
-    </section>
-
-    <!-- Modal for Card 1 -->
-    <div class="modal fade" id="destinationModal1" tabindex="-1" role="dialog" aria-labelledby="destinationModalLabel1" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="destinationModalLabel1">Paris, France</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <img src="images/pic5.png" class="img-fluid" alt="Paris, France">
-                </div>
-            </div>
-        </div>
+          </div>
+  
+          <!-- Card 3 -->
+          <div class="col-md-4">
+              <div class="card destination-card small-card" data-bs-toggle="modal" data-bs-target="#destinationModal3">
+                  <img src="images/pic4.png" class="card-img-top" alt="Singapore"> 
+                  <div class="card-body"></div>
+              </div>
+          </div>
+      </div>
     </div>
-
-    <!-- Modal for Card 2 -->
-    <div class="modal fade" id="destinationModal2" tabindex="-1" role="dialog" aria-labelledby="destinationModalLabel2" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="destinationModalLabel2">Seoul, Korea</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <img src="images/pic6.png" class="img-fluid" alt="Seoul, Korea">
-                </div>
-            </div>
-        </div>
+  </section>
+  
+  <!-- Offers Section (Background Image Section) -->
+<section id="offers" style="background-image: url('images/pic8.png'); background-size: cover; background-position: center center; padding: 50px 0;">
+    <div class="container">
+      <h2 class="text-center">Special Offers</h2>
+      <p class="text-center">Check out our exclusive offers below!</p>
+      <!-- Add any content you want for offers here -->
     </div>
+  </section>
+  
 
-    <!-- Modal for Card 3 -->
-    <div class="modal fade" id="destinationModal3" tabindex="-1" role="dialog" aria-labelledby="destinationModalLabel3" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="destinationModalLabel3">Singapore</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <img src="images/pic7.png" class="img-fluid" alt="Singapore">
-                </div>
-            </div>
+  <!-- Modal for Card 1 -->
+  <div class="modal fade" id="destinationModal1" tabindex="-1" aria-labelledby="destinationModalLabel1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="destinationModalLabel1">Paris, France</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
+        <div class="modal-body">
+          <img src="images/pic5.png" class="img-fluid" alt="Paris, France">
+        </div>
+      </div>
     </div>
+  </div>
 
-    <footer>
-        <p>&copy; 2024 TinTraverse. All rights reserved.</p>
-    </footer>
+  <!-- Modal for Card 2 -->
+  <div class="modal fade" id="destinationModal2" tabindex="-1" aria-labelledby="destinationModalLabel2" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="destinationModalLabel2">Seoul, Korea</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="images/pic6.png" class="img-fluid" alt="Seoul, Korea">
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Modal for Card 3 -->
+  <div class="modal fade" id="destinationModal3" tabindex="-1" aria-labelledby="destinationModalLabel3" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="destinationModalLabel3">Singapore</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="images/pic7.png" class="img-fluid" alt="Singapore">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- About Us Section -->
+<section id="about-us" style="padding: 50px 0; background-color: white;">
+    <div class="container">
+      <h2 class="text-center">About Us</h2>
+      <p class="text-center">Learn more about the cities we cover.</p>
+      
+      <!-- Buttons to show maps -->
+      <div class="text-center">
+        <button class="btn btn-info" data-bs-toggle="modal" data-bs-target="#singaporeMapModal">View Singapore Map</button>
+        <button class="btn btn-info" data-bs-toggle="modal" data-bs-target="#parisMapModal">View Paris Map</button>
+        <button class="btn btn-info" data-bs-toggle="modal" data-bs-target="#seoulMapModal">View Seoul Map</button>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Modal for Singapore Map -->
+  <div class="modal fade" id="singaporeMapModal" tabindex="-1" aria-labelledby="singaporeMapModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="singaporeMapModalLabel">Singapore</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!-- Embed Google Map for Singapore -->
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14865.020655563275!2d103.81981365716949!3d1.290270972468016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da19033a0a598d%3A0x0!2zY2FudG9yZXMgZ2Fu!5e0!3m2!1sen!2sin!4v1613069148001!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal for Paris Map -->
+  <div class="modal fade" id="parisMapModal" tabindex="-1" aria-labelledby="parisMapModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="parisMapModalLabel">Paris, France</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!-- Embed Google Map for Paris -->
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.8411879372875!2d2.2922923156748395!3d48.85884477928701!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66f7fe9d6db87%3A0x40c8c53101d6daaf!2sEiffel+Tower!5e0!3m2!1sen!2sfr!4v1607364765442!5m2!1sen!2sfr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal for Seoul Map -->
+  <div class="modal fade" id="seoulMapModal" tabindex="-1" aria-labelledby="seoulMapModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="seoulMapModalLabel">Seoul, Korea</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!-- Embed Google Map for Seoul -->
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126241.68761754747!2d126.82934382496265!3d37.56653562477904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca2b06a758b71%3A0xbed1d459da67a5b8!2zU2VvbCwgS291cnRh!5e0!3m2!1sen!2sin!4v1607365165183!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+  </script>
 </body>
+
 </html>
->>>>>>>>> Temporary merge branch 2
