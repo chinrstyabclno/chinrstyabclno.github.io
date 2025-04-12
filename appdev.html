@@ -5,17 +5,27 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AppDev</title>
+
+  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  
-  <!-- Link to external CSS file -->
+
+  <!-- External CSS -->
   <link rel="stylesheet" href="styles/styles.css">
 
   <!-- Favicon -->
   <link rel="icon" href="images/icon.png" type="image/png">
 </head>
 
-<body style="background-image: url('images/background.png'); background-size: cover; background-position: center center; min-height: 100vh; margin: 0; font-family: 'Times New Roman', Times, serif; color: rgba(255, 255, 255, 0.5);">
+<body style="
+  background-image: url('images/background.png');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Times New Roman', Times, serif;
+  color: rgba(255, 255, 255, 0.5);
+">
 
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #0f0319; padding: 15px 0;">
@@ -23,55 +33,67 @@
       <a class="navbar-brand mx-auto" href="#">
         <img src="images/logo.png" alt="Logo" style="width: 150px; height: auto;">
       </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html" style="font-size: 20px;">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="project.html" style="font-size: 20px;">Project</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html" style="font-size: 20px;">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html" style="font-size: 20px;">Contact</a>
+          </li>
+        </ul>
+      </div>
     </div>
   </nav>
 
   <!-- Project Section -->
-  <section class="project main-content" id="project-section" style="padding: 100px 0;">
+  <section id="project-section" class="project main-content py-5">
     <div class="container overflow-hidden">
-      <!-- Title Section -->
+      <!-- Section Title -->
       <div class="text-center mb-5">
-        <h1 style="font-size: 80px; font-weight: bold; color: rgba(255, 255, 255, 0.7); text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);">
-          My Projects
+        <h1 style="
+          font-size: 80px;
+          font-weight: bold;
+          color: rgba(255, 255, 255, 0.7);
+          text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        ">
+          AppDev Projects
         </h1>
       </div>
-      
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4" id="container">
+
+      <!-- Project Cards -->
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4" id="container">
         <!-- Project 1 Card -->
         <div class="col">
-          <div class="card my-3 rounded-5 overflow-hidden" style="background-color: #a476cf; height: fit-content;">
+          <div class="card my-3 rounded-5 overflow-hidden" style="background-color: #a476cf;">
+            <embed type="text/html" src="https://chinrstyabclno.github.io/ADET/A02/index.php" width="100%" height="200px">
             <div class="card-body shadow-lg">
-              <h6 class="card-title" style="color: white;">Project 1</h6>
-              <p class="card-text text-body-secondary">Project 1</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 2 Card -->
-        <div class="col">
-          <div class="card my-3 rounded-5 overflow-hidden" style="background-color: #a476cf; height: fit-content;">
-            <div class="card-body shadow-lg">
-              <h6 class="card-title" style="color: white;">Project 2</h6>
-              <p class="card-text text-body-secondary">Project 2</p>
+              <h6 class="card-title text-white">A02</h6>
+              <p class="card-text text-body-secondary">Once Upon a Shelf</p>
+              <a target="_blank" href="https://github.com/chinrstyabclno/chinrstyabclno.github.io/tree/main/ADET/A02" class="btn btn-primary">GitHub</a>
+              <a target="_blank" href="https://chinrstyabclno.github.io/ADET/A02/index.php" class="btn btn-primary">Site</a>
             </div>
           </div>
         </div>
         
-        <!-- Project 3 Card -->
-        <div class="col">
-          <div class="card my-3 rounded-5 overflow-hidden" style="background-color: #a476cf; height: fit-content;">
-            <div class="card-body shadow-lg">
-              <h6 class="card-title" style="color: white;">Project 3</h6>
-              <p class="card-text text-body-secondary">Project 3</p>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </section>
 
+  <!-- Bootstrap Bundle JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>
