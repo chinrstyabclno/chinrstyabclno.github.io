@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  <link rel="icon" href="images/icon.png" type="image/jpeg" />
+
+  <title>Bento with Images</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    @media (max-width: 768px) {
+  .bento-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 120px;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .bento-container {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 100px;
+    padding: 0.5rem;
+  }
+}
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: #f5f5f5;
+      font-family: sans-serif;
+    }
+
+    .bento-container {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-auto-rows: 150px;
+      gap: 10px;
+      padding: 2rem;
+    }
+
+    .bento-item {
+      border-radius: 12px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .bento-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Custom Sizes (like Apple’s Bento Grid) */
+    .item-1  { grid-column: span 2; grid-row: span 2; }
+    .item-2  { grid-column: span 2; }
+    .item-3  { grid-column: span 2; grid-row: span 2; }
+    .item-4  { grid-column: span 1; }
+    .item-5  { grid-column: span 1; }
+    .item-6 {  grid-column: span 3; grid-row: span 2;    }
+    .item-7  { grid-column: span 1; }
+    .item-8  { grid-column: span 1; }
+    .item-9  { grid-column: span 1; }
+    .item-10 { grid-column: span 1; }
+    .item-11 { grid-column: span 2; grid-row: span 2; }
+    .item-12 { grid-column: span 2; }
+    .item-13 { grid-column: span 2; }
+  </style>
+</head>
+<body>
+
+  <!-- ✅ Bootstrap Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-black py-3">
+    <div class="container-fluid px-4">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="images/logo.png" alt="Logo" style="height: 60px; margin-right: 10px;" />
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ✅ Bento Grid -->
+  <div class="bento-container">
+    <div class="bento-item item-1"><img src="images/pic1.avif" alt="Pic 1"></div>
+    <div class="bento-item item-2"><img src="images/pic2.jpg" alt="Pic 2"></div>
+    <div class="bento-item item-3"><img src="images/pic3.png" alt="Pic 3"></div>
+    <div class="bento-item item-4"><img src="images/pic4.png" alt="Pic 4"></div>
+    <div class="bento-item item-5"><img src="images/pic5.png" alt="Pic 5"></div>
+    <div class="bento-item item-6"><img src="images/pic6.png" alt="Pic 6"></div>
+    <div class="bento-item item-7"><img src="images/pic7.png" alt="Pic 7"></div>
+    <div class="bento-item item-8"><img src="images/pic8.png" alt="Pic 8"></div>
+    <div class="bento-item item-9"><img src="images/pic9.png" alt="Pic 9"></div>
+    <div class="bento-item item-10"><img src="images/pic10.jpg" alt="Pic 10"></div>
+    <div class="bento-item item-11"><img src="images/pic11.avif" alt="Pic 11"></div>
+    <div class="bento-item item-12"><img src="images/pic12.jpg" alt="Pic 12"></div>
+    <div class="bento-item item-13"><img src="images/pic13.png" alt="Pic 13"></div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
