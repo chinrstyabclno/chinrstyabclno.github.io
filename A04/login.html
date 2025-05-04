@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hack & Sip | Login</title>
+  <link rel="icon" type="image/png" href="images/icon.png"> 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+
+  <style>
+    body {
+      background-color: #f8f1e4;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .login-card {
+      background-color: #fff;
+      border: none;
+      border-radius: 1.5rem;
+      box-shadow: 0 8px 16px rgba(111, 79, 55, 0.2);
+    }
+
+    .login-card .form-control {
+      border-radius: 0.75rem;
+    }
+
+    .login-card .btn-coffee {
+      background-color: #6f4f37;
+      border: none;
+    }
+
+    .login-card .btn-coffee:hover {
+      background-color: #5c3e2a;
+    }
+
+    .brand {
+      font-weight: bold;
+      color: #6f4f37;
+      font-size: 2rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container p-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6 col-lg-5">
+        <div class="card p-5 login-card text-center">
+          <div class="brand mb-4">☕ Hack & Sip</div>
+          <form action="index.html">
+            <input type="text" class="form-control my-3" placeholder="Username" required>
+            <input type="password" class="form-control my-3" placeholder="Password" required>
+            <input type="submit" class="btn btn-coffee text-white rounded-5 mt-4 w-100" value="Login">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>
