@@ -173,425 +173,59 @@
   </footer>
   
   <script>
-    var products = [
-      {
-        "category": "Hot",
-        "contents": [
-          {
-            "isAvailable": true,
-            "name": "Cafe Latte",
-            "code": "CL",
-            "price": 100,
-            "img": "images/hot.png"
-          },
-          {
-            "isAvailable": true,
-            "name": "Hot Americano",
-            "code": "HAMER",
-            "price": 70,
-            "img": "images/hot.png"
-          },
-          {
-            "isAvailable": true,
-            "name": "Hot Cappuccino",
-            "code": "HCAP",
-            "price": 80,
-            "img": "images/hot.png"
-          },
-          {
-            "isAvailable": true,
-            "name": "Hot Mocha",
-            "code": "HM",
-            "price": 90,
-            "img": "images/hot.png"
-          },
-          {
-            "isAvailable": true,
-            "name": "Hot Caramel Macchiato",
-            "code": "HCM",
-            "price": 90,
-            "img": "images/hot.png"
-          },
-          {
-            "isAvailable": true,
-            "name": "Flat White",
-            "code": "FM",
-            "price": 70,
-            "img": "images/hot.png"
-          },
-          {
-            "isAvailable": true,
-            "name": "Hot Chocolate",
-            "code": "HCC",
-            "price": 80,
-            "img": "images/hot.png"
-          },
-          {
-            "isAvailable": true,
-            "name": "Irish Coffee",
-            "code": "ICF",
-            "price": 120,
-            "img": "images/hot.png"
-          },
-          {
-            "isAvailable": true,
-            "name": "Chai Latte",
-            "code": "CHAI",
-            "price": 95,
-            "img": "images/hot.png"
-          },
-          {
-            "isAvailable": true,
-            "name": "Hot Vanilla Latte",
-            "code": "HVLL",
-            "price": 100,
-            "img": "images/hot.png"
-          }
-        ]
-      },
-      {
-        "category": "Cold Brew & Iced Coffee",
-        "contents": [
-          {
-            "isAvailable": true,
-            "name": "Classic Cold Brew",
-            "code": "CCB",
-            "price": 90,
-            "img": "images/ccoldbrew.png"
-          },
-          {
-            "isAvailable": true,
-            "name": "Vanilla Cream Cold Brew",
-            "code": "VCCB",
-            "price": 100,
-            "img": "images/vcreambrew.png"
-          },
-          {
-            "isAvailable": true,
-            "name": "Salted Caramel Cold Brew",
-            "code": "SCCB",
-            "price": 105,
-            "img": "images/scaramelbrew.png"
-          },
-          {
-            "isAvailable": true,
-            "name": "Chocolate Cream Cold Brew",
-            "code": "CCCB",
-            "price": 110,
-            "img": "images/chococreambrew.png"
-          },
-          {
-            "isAvailable": true,
-            "name": "Brown Sugar Cold Brew",
-            "code": "BSCB",
-            "price": 115,
-            "img": "images/bsugarbrew.png"
-          },
-          {
-            "isAvailable": true,
-            "name": "Iced Americano",
-            "code": "ICAM",
-            "price": 80,
-            "img": "images/icedamericano.png"
-          },
-          {
-            "isAvailable": true,
-            "name": "Iced Mocha",
-            "code": "ICM",
-            "price": 95,
-            "img": "images/icedmocha.png"
-          },
-          {
-            "isAvailable": true,
-            "name": "Iced Spanish Latte",
-            "code": "ICSL",
-            "price": 105,
-            "img": "images/icedspanishlatte.png"
-          },
-          {
-            "isAvailable": true,
-            "name": "Iced Macchiato",
-            "code": "ICMAC",
-            "price": 90,
-            "img": "images/icedmacchiato.png"
-          },
-          {
-            "isAvailable": true,
-            "name": "Iced Hazelnut Coffee",
-            "code": "IHC",
-            "price": 90,
-            "img": "images/icedhazelnutcof.png"
-          },
-          {
-            "isAvailable": true,
-            "name": "Iced Hazelnut Latte",
-            "code": "IHL",
-            "price": 90,
-            "img": "images/icedhazelnutlat.png"
-          },
-          {
-            "isAvailable": true,
-            "name": "Iced Caramel Latte",
-            "code": "ICCL",
-            "price": 100,
-            "img": "images/icedcaramellat.png"
-          },
-          {
-            "isAvailable": true,
-            "name": "Iced French Vanilla Latte",
-            "code": "ICFVL",
-            "price": 105,
-            "img": "images/icedfrenchvanillat.png"
-          }
-        ]
-      },
-      {
-        "category": "Espresso-Based",
-        "contents": [
-          {
-            "isAvailable": true,
-            "name": "Flat White",
-            "code": "FLWHITE",
-            "price": 85,
-            "img": "images/espresso.png"
-          },
-          {
-            "isAvailable": true,
-            "name": "Espresso Macchiato",
-            "code": "EMACCH",
-            "price": 75,
-            "img": "images/espresso.png"
-          },
-          {
-            "isAvailable": true,
-            "name": "Cappuccino",
-            "code": "CAPPUCCINO",
-            "price": 80,
-            "img": "images/espresso.png"
-          },
-          {
-            "isAvailable": true,
-            "name": "Americano",
-            "code": "AMERICANO",
-            "price": 70,
-            "img": "images/espresso.png"
-          }
-        ]
-      },
-      {
-        "category": "Milk Based",
-        "contents": [
-          {
-            "isAvailable": true,
-            "name": "Milky Choco",
-            "code": "MLCHOCO",
-            "price": 95,
-            "img": "images/millkychoco.png"
-          },
-          {
-            "isAvailable": true,
-            "name": "Milky Caramel",
-            "code": "MLC",
-            "price": 100,
-            "img": "images/milkycaramel.png"
-          },
-          {
-            "isAvailable": true,
-            "name": "Milky Salted Caramel",
-            "code": "MLSC",
-            "price": 100,
-            "img": "images/milkysaltedcaramel.png"
-          },
-          {
-            "isAvailable": true,
-            "name": "Milky Butterscotch",
-            "code": "MLBS",
-            "price": 100,
-            "img": "images/milkybutterscotch.jpg"
-          }
-        ]
-      },
-      {
-        "category": "Matcha Series",
-        "contents": [
-          {
-            "isAvailable": true,
-            "name": "Matcha Latte",
-            "code": "MLATTE",
-            "price": 120,
-            "img": "images/matchalatte.png"
-          },
-          {
-            "isAvailable": true,
-            "name": "Matcha Espresso",
-            "code": "ME",
-            "price": 110,
-            "img": "images/matchaespresso.png"
-          },
-          {
-            "isAvailable": true,
-            "name": "Matcha Strawberry",
-            "code": "MS",
-            "price": 130,
-            "img": "images/matchastrawberry.png"
-          }
-        ]
-      },
-      {
-        "category": "Frappes",
-        "contents": [
-          {
-            "isAvailable": true,
-            "name": "Caramel Frappe",
-            "code": "CARFRAP",
-            "price": 100,
-            "img": "images/caramelfrappe.png"
-          },
-          {
-            "isAvailable": true,
-            "name": "Mocha Frappe",
-            "code": "MOCHFRAP",
-            "price": 105,
-            "img": "images/mochafrappe.png"
-          },
-          {
-            "isAvailable": true,
-            "name": "Java Chip Frappe",
-            "code": "JCFRAP",
-            "price": 130,
-            "img": "images/javachipfrappe.jpg"
-          },
-          {
-            "isAvailable": true,
-            "name": "White Mocha Frappe",
-            "code": "WMFRAP",
-            "price": 120,
-            "img": "images/whitemochafrappe.jpg"
-          },
-          {
-            "isAvailable": true,
-            "name": "Cookies and Cream Frappe",
-            "code": "CCFRAP",
-            "price": 130,
-            "img": "images/ccfrappe.jpg"
-          },
-          {
-            "isAvailable": true,
-            "name": "Chocolate Frappe",
-            "code": "CFRAP",
-            "price": 100,
-            "img": "images/chocofrappe.jpg"
-          },
-          {
-            "isAvailable": true,
-            "name": "Avocado Frappe",
-            "code": "AVFRAP",
-            "price": 150,
-            "img": "images/avocadofrappe.jpg"
-          }
-        ]
-      },
-      {
-        "category": "Pastries & Snacks",
-        "contents": [
-          {
-            "isAvailable": true,
-            "name": "Plain Croissant",
-            "code": "PCROIS",
-            "price": 60,
-            "img": "images/pcroissant.jpg"
-          },
-          {
-            "isAvailable": true,
-            "name": "Tiramisu Croissant",
-            "code": "TCROIS",
-            "price": 80,
-            "img": "images/tcroissant.jpg"
-          },
-          {
-            "isAvailable": true,
-            "name": "Caramel Biscoff Croissant",
-            "code": "CBCROIS",
-            "price": 100,
-            "img": "images/cbcroissant.webp"
-          },
-          {
-            "isAvailable": true,
-            "name": "Blueberry Muffin",
-            "code": "BBMUFFIN",
-            "price": 55,
-            "img": "images/bbmuffin.jpg"
-          },
-          {
-            "isAvailable": true,
-            "name": "Banana Muffin",
-            "code": "BMUFFIN",
-            "price": 60,
-            "img": "images/bmuffin.jpg"
-          },
-          {
-            "isAvailable": true,
-            "name": "Cinnamon Roll",
-            "code": "CR",
-            "price": 80,
-            "img": "images/cinnamonroll.jpg"
-          },
-          {
-            "isAvailable": true,
-            "name": "Nutella S'mores Cookie",
-            "code": "NSC",
-            "price": 60,
-            "img": "images/nutella.jpg"
-          },
-          {
-            "isAvailable": true,
-            "name": "French Fries",
-            "code": "FF",
-            "price": 70,
-            "img": "images/fries.png"
-          },
-        ]
-      }
-    ];
+    var categories = [];
+    var products = [];
+    var total = 0;
 
-    let total = 0;
+    var productloading = document.getElementById("productloading");
+    var maincontainer = document.getElementById("maincontainer");
 
-  function searchCategory(e) {
-    e.preventDefault();
-    const query = document.getElementById('searchInput').value.toLowerCase();
-    const buttons = document.querySelectorAll('#categories .card');
+    const getAllCategories = async () => {
+      fetch('http://localhost/chinrstyabclno.github.io/ADET/A06/categories.php')
+        .then(response => response.json())
+        .then(data => {
+          categories = data;
+          loadCategories();
+        });
+    }
 
-    buttons.forEach(button => {
-      const text = button.textContent.toLowerCase();
-      button.style.display = text.includes(query) ? 'block' : 'none';
-    });
-  }
+    const getAllProducts = async (categoryID) => {
+      const categoryData = { categoryID };
 
-  function clearReceipt() {
-    document.getElementById('receipt').innerHTML = '';
-    document.getElementById('totalValue').innerText = '₱0';
-    total = 0;
-  }
+      maincontainer.innerHTML = "";
+      productloading.style.display = "block";
 
-  function loadCategories() {
-    var categoriesContainer = document.getElementById("categories");
-    products.forEach((product, index) => {
-      categoriesContainer.innerHTML += `
-        <div onclick="loadProducts(${index})" class="card mx-1 custom-button p-2 text-center">
-          <small>${product.category}</small>
-        </div>
-      `;
-    });
-  }
+      fetch('http://localhost/chinrstyabclno.github.io/ADET/A06/products.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(categoryData)
+      })
+      .then(response => response.json())
+      .then(data => {
+        products = data;
+        loadProducts();
+      });
+    }
 
-  function loadProducts(index) {
-    var mainContainer = document.getElementById("maincontainer");
-    var productCategory = products[index];
-    mainContainer.innerHTML = ''; 
+    function loadCategories() {
+      const categoriesContainer = document.getElementById("categories");
+      categoriesContainer.innerHTML = "";
 
-    productCategory.contents.forEach((product) => {
-      if (product.isAvailable) {
-        mainContainer.innerHTML += `
+      categories.forEach(category => {
+        categoriesContainer.innerHTML += `
+          <div onclick="getAllProducts('${category.categoryID}')" class="card mx-1 custom-button p-3 text-center">
+            <small>${category.name}</small>
+          </div>
+        `;
+      });
+    }
+
+    function loadProducts() {
+      maincontainer.innerHTML = "";
+      productloading.style.display = "none";
+
+      products.forEach(product => {
+        maincontainer.innerHTML += `
           <div class="card custom-button mx-2 my-2" style="width: 18rem;">
             <img src="${product.img}" class="product-img card-img-top" alt="${product.name}">
             <div class="card-body">
@@ -601,26 +235,47 @@
             </div>
           </div>
         `;
+      });
+    }
+
+    function addToReceipt(productCode, productPrice) {
+  const receiptContainer = document.getElementById("receipt");
+  const totalContainer = document.getElementById("totalValue");
+
+  total += productPrice;
+
+  receiptContainer.innerHTML += `
+    <div class="d-flex justify-content-between">
+      <div>${productCode}</div>
+      <div>₱${productPrice}</div>
+    </div>
+  `;
+
+  totalContainer.textContent = `₱${total}`;
+}
+
+    function clearReceipt() {
+      document.getElementById("receipt").innerHTML = "";
+      document.getElementById("totalValue").innerHTML = "₱0";
+      total = 0;
+    }
+
+    function searchCategory(event) {
+      event.preventDefault();
+      const searchValue = document.getElementById("searchInput").value.toLowerCase();
+      const foundCategory = categories.find(cat => cat.name.toLowerCase().includes(searchValue));
+      if (foundCategory) {
+        getAllProducts(foundCategory.categoryID);
+      } else {
+        alert("Category not found.");
       }
-    });
-  }
+    }
 
-  function addToReceipt(productName, productPrice) {
-    var receiptContainer = document.getElementById("receipt");
-    var totalContainer = document.getElementById("totalValue");
-    total += productPrice;
+    getAllCategories();
+  </script>
 
-    receiptContainer.innerHTML += `
-      <div class="d-flex justify-content-between">
-        <div>${productName}</div>
-        <div>₱${productPrice}</div>
-      </div>
-    `;
-
-    totalContainer.textContent = `₱${total}`;
-  }
-
-  window.onload = loadCategories;
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous">
   </script>
 </body>
 </html>
